@@ -31,6 +31,8 @@ const useDeepCompareMemoize = (value: any) => {
     return ref.current;
 }
 
+// because React does not do deep comparisons, a custom hook is used
+// see discussion in https://github.com/googlemaps/js-samples/issues/946
 const useDeepCompareEffectForMaps = (
     callback: React.EffectCallback,
     dependencies: any[]

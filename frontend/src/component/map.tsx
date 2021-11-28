@@ -23,10 +23,10 @@ const MapWrapper: React.VFC = () => {
 		}
 	};
 
-	const [zoom, setZoom] = React.useState(0);
+	const [zoom, setZoom] = React.useState(12);
 	const [center, setCenter] = React.useState<google.maps.LatLngLiteral>({
-		lat: -34,
-		lng: 151,
+		lat: 51.515,
+		lng: -0.111,
 	});
 
 	const onIdle = (m: google.maps.Map) => {
@@ -36,7 +36,7 @@ const MapWrapper: React.VFC = () => {
 	};
 
 	return <Wrapper apiKey={config.googleMapsApiKey} render={render}>
-		<Map style={{ width: "300px", height: "300px" }} zoom={zoom} center={center} onIdle={onIdle} />
+		<Map style={{ width: "100hh", height: "80vh" }} zoom={zoom} center={center} onIdle={onIdle} />
 	</Wrapper>
 }
 
@@ -56,8 +56,6 @@ const Map: React.FC<MapProps> = ({
 		}
 	}, [ref, map]);
 
-	// because React does not do deep comparisons, a custom hook is used
-	// see discussion in https://github.com/googlemaps/js-samples/issues/946
 	useDeepCompareEffectForMaps(() => {
 		if (map) {
 			map.setOptions(options);
