@@ -19,9 +19,7 @@ function App() {
         >
           Learn React
         </a>
-        <div>
-          <Map />
-        </div>
+        <Map />
       </header>
     </div>
   );

@@ -44,3 +44,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Env file configuration
+
+You will need to create a `.env` file with any necessary secrets at the same level as `package.json`.
