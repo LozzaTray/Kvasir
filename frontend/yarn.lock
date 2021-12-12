@@ -1261,11 +1261,6 @@
   dependencies:
     "@googlemaps/js-api-loader" "^1.11.1"
 
-"@googlemaps/typescript-guards@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@googlemaps/typescript-guards/-/typescript-guards-1.0.3.tgz#797bc900e0f0358a582f5cff882fc449cd118cfd"
-  integrity sha512-sBW5LOKx3Eq1eoKbpb9O9GQr1qHZp9CWt0zs+gbV63a2ALwleklxRL60B8O9WSuOpa7vGy4CpD30OWNafdXlxw==
-
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
