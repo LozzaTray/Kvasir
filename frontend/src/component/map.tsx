@@ -2,6 +2,7 @@ import React from "react";
 import { Status, Wrapper } from "@googlemaps/react-wrapper";
 import config from "../config";
 import { useDeepCompareEffectForMaps } from "../hooks/map";
+import { Marker } from "./marker";
 
 
 interface MapProps extends google.maps.MapOptions {
@@ -35,8 +36,21 @@ const MapWrapper: React.VFC = () => {
 		setCenter(m.getCenter()!.toJSON());
 	};
 
+	const locations = [
+		{
+			lat: 51.515,
+			lng: -0.111
+		},
+		{
+			lat: 51.515,
+			lng: -0.121
+		}
+	]
+
 	return <Wrapper apiKey={config.googleMapsApiKey} render={render}>
-		<Map style={{ width: "100hh", height: "80vh" }} zoom={zoom} center={center} onIdle={onIdle} />
+		<Map style={{ width: "100hh", height: "80vh" }} zoom={zoom} center={center} onIdle={onIdle}>
+			{locations.map((location) => <Marker position={location} />)}
+		</ Map>
 	</Wrapper>
 }
 
@@ -62,7 +76,17 @@ const Map: React.FC<MapProps> = ({
 		}
 	}, [map, options]);
 
-	return <div ref={ref} style={style} />
+	return (
+		<>
+			<div ref={ref} style={style} />
+			{React.Children.map(children, (child) => {
+				if (React.isValidElement(child)) {
+					// set the map prop on the child component
+					return React.cloneElement(child, { map });
+				}
+			})}
+		</>
+	);
 };
 
 export default MapWrapper;
