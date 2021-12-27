@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="50 50 300 420" xmlns="http://www.w3.org/2000/svg">
+  <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 3px;" d="M 300 109.172 C 304.885 53.489 106.757 46.521 100 107.305"/>
+  <g>
+    <g>
+      <g>
+        <g>
+          <g>
+            <path style="stroke: rgb(0, 0, 0); vector-effect: non-scaling-stroke; stroke-width: 3px; fill: rgb(246, 193, 1);" d="M 276.786 271.861 C 258.378 307.231 283.265 378.336 278.355 424.377 C 277.316 434.119 220.161 421.995 206.764 429.247 C 215.287 256.519 301.078 225.185 276.786 271.861 Z"/>
+            <path style="fill: rgb(246, 193, 1); stroke: rgb(0, 0, 0); vector-effect: non-scaling-stroke; stroke-width: 3px;" d="M 200 469.292 C 224.962 355.089 216.353 335.858 256.98 300 C 307.487 255.422 318.662 130.273 300 100 L 200 100"/>
+          </g>
+          <g transform="matrix(-1, 0, 0, 1, 400, 0)">
+            <path style="stroke: rgb(0, 0, 0); vector-effect: non-scaling-stroke; stroke-width: 3px; fill: rgb(246, 193, 1);" d="M 276.786 271.861 C 258.378 307.231 283.265 378.336 278.355 424.377 C 277.316 434.119 220.161 421.995 206.764 429.247 C 215.287 256.519 301.078 225.185 276.786 271.861 Z"/>
+            <path style="fill: rgb(246, 193, 1); stroke: rgb(0, 0, 0); vector-effect: non-scaling-stroke; stroke-width: 3px;" d="M 200 469.292 C 224.962 355.089 216.353 335.858 256.98 300 C 307.487 255.422 318.662 130.273 300 100 L 200 100"/>
+          </g>
+        </g>
+        <g transform="matrix(-1, 0, 0, 1, 400, 0)"/>
+      </g>
+      <g/>
+    </g>
+  </g>
+  <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 90px; white-space: pre;" x="115.53" y="200.472">4.20</text>
+</svg>

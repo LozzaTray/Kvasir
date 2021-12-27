@@ -3,6 +3,7 @@ import { Status, Wrapper } from "@googlemaps/react-wrapper";
 import config from "../config";
 import { useDeepCompareEffectForMaps } from "../hooks/map";
 import { Marker } from "./marker";
+import pint from "../assets/pint.svg";
 
 
 interface MapProps extends google.maps.MapOptions {
@@ -49,7 +50,7 @@ const MapWrapper: React.VFC = () => {
 
 	return <Wrapper apiKey={config.googleMapsApiKey} render={render}>
 		<Map style={{ width: "100hh", height: "80vh" }} zoom={zoom} center={center} onIdle={onIdle}>
-			{locations.map((location) => <Marker position={location} />)}
+			{locations.map((location) => <Marker position={location} icon={pint} />)}
 		</ Map>
 	</Wrapper>
 }
