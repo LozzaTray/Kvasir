@@ -1,12 +1,7 @@
 import React from "react";
+import { IDrink } from "../model/drink";
 
-interface DrinkProps {
-    lat: number;
-    lng: number;
-    pence: number;
-}
-
-const Drink: React.FC<DrinkProps> = (props) => {
+const Drink: React.FC<IDrink> = (props) => {
     const markerAdjustment = {
         transform: 'translate(-50%, -100%)',
         position: 'absolute' as 'absolute'

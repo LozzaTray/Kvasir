@@ -2,31 +2,19 @@ import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 import config from "../config";
 import Drink from "./drink";
+import { getDrinks } from "../api/drink";
 
 // adapted from https://levelup.gitconnected.com/reactjs-google-maps-with-custom-marker-ece0c7d184c4
 
 
 const SimpleMap: React.FC = () => {
   const [center, setCenter] = useState({
-    lat: 51.515,
-    lng: -0.111,
+    lat: 52.20805855420469,
+    lng: 0.11630382846607584,
   });
-  const [zoom, setZoom] = useState(12);
+  const [zoom, setZoom] = useState(16);
 
-  const options_array = [
-    {
-      lat: 51.515,
-      lng: -0.111,
-      pence: 101
-    },
-    {
-      lat: 51.515,
-      lng: -0.121,
-      pence: 420
-    }
-  ]
-
-
+  const drinks = getDrinks();
 
   return (
     <div style={{ height: '80vh', width: '100vw' }}>
@@ -36,7 +24,7 @@ const SimpleMap: React.FC = () => {
         defaultZoom={zoom}
         yesIWantToUseGoogleMapApiInternals
       >
-        {options_array.map((options, idx) => <Drink key={`drink-${idx}`} {...options} />)}
+        {drinks.map((drink, idx) => <Drink key={`drink-${idx}`} {...drink} />)}
       </GoogleMapReact>
     </div>
   );
