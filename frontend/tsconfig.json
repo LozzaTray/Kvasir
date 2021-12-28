@@ -7,7 +7,6 @@
       "esnext"
     ],
     "types": [
-      "googlemaps",
       "node"
     ],
     "allowJs": true,
