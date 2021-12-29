@@ -7,10 +7,12 @@ import { getDrinks } from "../api/drink";
 // adapted from https://levelup.gitconnected.com/reactjs-google-maps-with-custom-marker-ece0c7d184c4
 
 const SimpleMap: React.FC = () => {
+  //  eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [center, setCenter] = useState({
     lat: 52.20805855420469,
     lng: 0.11630382846607584,
   });
+  //  eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [zoom, setZoom] = useState(16);
 
   const drinks = getDrinks();
