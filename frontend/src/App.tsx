@@ -1,5 +1,5 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 import Map from "./component/map";
 
 const App: React.VFC = () => {
@@ -13,6 +13,6 @@ const App: React.VFC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default App;
