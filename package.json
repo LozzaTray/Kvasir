@@ -11,11 +11,5 @@
     "hooks": {
       "pre-commit": "cd frontend && yarn run lint-staged"
     }
-  },
-  "dependencies": {
-    "add": "^2.0.6",
-    "supercluster": "^7.1.4",
-    "use-supercluster": "^0.4.0",
-    "yarn": "^1.22.17"
   }
 }
