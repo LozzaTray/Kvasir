@@ -11,7 +11,7 @@ const Drink: React.FC<IDrink> = (props) => {
     <div style={markerAdjustment}>
       <svg
         viewBox="-120 -400 240 400"
-        width="40px"
+        width="42px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g fill="rgb(246, 193, 1)" stroke="rgb(0, 0, 0)" strokeWidth="6px">

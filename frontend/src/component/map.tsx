@@ -17,7 +17,8 @@ const Map: React.FC = () => {
     lng: 0.11630382846607584,
   };
 
-  const [zoom, setZoom] = useState(16);
+  const defaultZoom = 16;
+  const [zoom, setZoom] = useState(defaultZoom);
 
   const drinks = getDrinks();
 
@@ -47,7 +48,7 @@ const Map: React.FC = () => {
       <GoogleMapReact
         bootstrapURLKeys={{ key: config.googleMapsApiKey }}
         defaultCenter={defaultCenter}
-        defaultZoom={zoom}
+        defaultZoom={defaultZoom}
         yesIWantToUseGoogleMapApiInternals
         onGoogleApiLoaded={({ map }): void => {
           mapRef.current = map;
