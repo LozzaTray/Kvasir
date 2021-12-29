@@ -20,6 +20,48 @@
       "lng": 0.11618023558240591,
       "beverage": "Foster's",
       "pence": 370
+    },
+    {
+      "venue": "The Baron of Beef",
+      "lat": 52.208996641898764,
+      "lng": 0.11804998561986617,
+      "beverage": "Ice Breaker Pale Ale",
+      "pence": 390
+    },
+    {
+      "venue": "The Maypole",
+      "lat": 52.20974175721476,
+      "lng": 0.11924937380058505,
+      "beverage": "Elvis Juice",
+      "pence": 410
+    },
+    {
+      "venue": "The Eagle",
+      "lat": 52.20412117195816,
+      "lng": 0.1180357986621598,
+      "beverage": "Stella Artois",
+      "pence": 330
+    },
+    {
+      "venue": "The Regal",
+      "lat": 52.20303397621604,
+      "lng": 0.12347732488722296,
+      "beverage": "Doom Bar",
+      "pence": 190
+    },
+    {
+      "venue": "The Punter",
+      "lat": 52.21064378789526,
+      "lng": 0.11321217461799561,
+      "beverage": "Ghost Ship",
+      "pence": 310
+    },
+    {
+      "venue": "The Castle Inn",
+      "lat": 52.212064722404854,
+      "lng": 0.1134917017518828,
+      "beverage": "Bitburger",
+      "pence": 450
     }
   ]
 }
