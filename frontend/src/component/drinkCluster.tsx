@@ -1,18 +1,20 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 
 interface ClusterProps {
   count: number;
   lat: number;
   lng: number;
+  onClick: MouseEventHandler<HTMLDivElement>;
 }
 
-const DrinkCluster: React.FC<ClusterProps> = ({ count }) => {
+const DrinkCluster: React.FC<ClusterProps> = ({ count, onClick }) => {
   const markerAdjustment = {
     transform: "translate(-50%, -50%)",
     position: "absolute" as const,
+    cursor: "pointer",
   };
   return (
-    <div style={markerAdjustment}>
+    <div style={markerAdjustment} onClick={onClick}>
       <svg
         viewBox="-240 -400 480 800"
         width="80px"
@@ -40,7 +42,7 @@ const DrinkCluster: React.FC<ClusterProps> = ({ count }) => {
           textAnchor="middle"
           strokeWidth="0px"
         >
-          {count.toFixed(2)}
+          {`#${count.toFixed(0)}`}
         </text>
       </svg>
     </div>

@@ -9,7 +9,7 @@ import useSupercluster from "use-supercluster";
 // adapted from https://levelup.gitconnected.com/reactjs-google-maps-with-custom-marker-ece0c7d184c4
 
 const Map: React.FC = () => {
-  const mapRef = useRef();
+  const mapRef = useRef() as any;
   const [bounds, setBounds] = useState<number[]>([]);
 
   const defaultCenter = {
@@ -74,6 +74,14 @@ const Map: React.FC = () => {
                 lat={latitude}
                 lng={longitude}
                 count={pointCount}
+                onClick={(): void => {
+                  const expansionZoom = Math.min(
+                    supercluster.getClusterExpansionZoom(cluster.id),
+                    20
+                  );
+                  mapRef.current.setZoom(expansionZoom);
+                  mapRef.current.panTo({ lat: latitude, lng: longitude });
+                }}
               />
             );
           }

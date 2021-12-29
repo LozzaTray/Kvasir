@@ -5,6 +5,7 @@ const Drink: React.FC<IDrink> = (props) => {
   const markerAdjustment = {
     transform: "translate(-50%, -100%)",
     position: "absolute" as const,
+    cursor: "pointer",
   };
   return (
     <div style={markerAdjustment}>
