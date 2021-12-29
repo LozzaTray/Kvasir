@@ -1,12 +1,10 @@
 import React, { useRef, useState } from "react";
 import GoogleMapReact from "google-map-react";
-import config from "../config";
-import { Drink } from "./drink";
-import { DrinkCluster } from "./drinkCluster";
-import { getDrinks } from "../api/drink";
+import config from "config";
+import { Drink } from "component/drink";
+import { Cluster } from "component/cluster";
+import { getDrinks } from "api/drink";
 import useSupercluster from "use-supercluster";
-
-// adapted from https://levelup.gitconnected.com/reactjs-google-maps-with-custom-marker-ece0c7d184c4
 
 const Map: React.FC = () => {
   const mapRef = useRef() as any;
@@ -70,7 +68,7 @@ const Map: React.FC = () => {
 
           if (isCluster) {
             return (
-              <DrinkCluster
+              <Cluster
                 key={`cluster-${idx}`}
                 lat={latitude}
                 lng={longitude}
