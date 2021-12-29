@@ -4,7 +4,7 @@ import { IDrink } from "../model/drink";
 const Drink: React.FC<IDrink> = (props) => {
   const markerAdjustment = {
     transform: "translate(-50%, -100%)",
-    position: "absolute" as "absolute",
+    position: "absolute" as const,
   };
   return (
     <div style={markerAdjustment}>
