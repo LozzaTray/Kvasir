@@ -1,14 +1,9 @@
 import { Router } from "express";
-import { getAllUsers, addOneUser, updateOneUser, deleteOneUser } from "./Users";
-
-// User-route
-const userRouter = Router();
-userRouter.get("/all", getAllUsers);
-userRouter.post("/add", addOneUser);
-userRouter.put("/update", updateOneUser);
-userRouter.delete("/delete/:id", deleteOneUser);
+import { attachControllers } from "@decorators/express";
+import { PubController } from "controller/PubController";
+import { UserController } from "controller/UserController";
 
 // Export the base-router
 const baseRouter = Router();
-baseRouter.use("/users", userRouter);
+attachControllers(baseRouter, [PubController, UserController]);
 export default baseRouter;

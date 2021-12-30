@@ -1,28 +1,28 @@
 {
-  "name": "kvasir",
-  "version": "1.0.0",
-  "repository": "git@github.com:LozzaTray/Kvasir.git",
-  "author": "Lawrence Tray <ltray99@gmail.com>",
-  "license": "MIT",
-  "private": true,
-  "workspaces": [
-    "backend",
-    "frontend"
-  ],
-  "scripts": {
-    "prettier-check": "prettier --check .",
-    "prettier-write": "prettier --write .",
-    "lint": "yarn workspaces run lint",
-    "test": "yarn workspaces run test"
-  },
-  "devDependencies": {
-    "husky": "4",
-    "prettier": "^2.5.1",
-    "pretty-quick": "^3.1.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn run pretty-quick --staged"
+    "name": "kvasir",
+    "version": "1.0.0",
+    "repository": "git@github.com:LozzaTray/Kvasir.git",
+    "author": "Lawrence Tray <ltray99@gmail.com>",
+    "license": "MIT",
+    "private": true,
+    "workspaces": [
+        "backend",
+        "frontend"
+    ],
+    "scripts": {
+        "prettier-check": "prettier --check . --ignore-path .gitignore",
+        "prettier-write": "prettier --write . --ignore-path .gitignore",
+        "lint": "yarn workspaces run lint",
+        "test": "yarn workspaces run test"
+    },
+    "devDependencies": {
+        "husky": "4",
+        "prettier": "^2.5.1",
+        "pretty-quick": "^3.1.3"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "yarn run pretty-quick --staged"
+        }
     }
-  }
 }
