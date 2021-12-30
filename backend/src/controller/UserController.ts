@@ -3,23 +3,17 @@ import { Request, Response } from "express";
 
 import UserDao from "dao/User/UserDao.mock";
 import { paramMissingError } from "shared/constants";
-import { Get, Delete, Post, Put } from "@decorators/express";
+import { Get, Delete, Post, Put, Controller } from "@decorators/express";
 
-const userDao = new UserDao();
 const { BAD_REQUEST, CREATED, OK } = StatusCodes;
-
-// User-route
-const userRouter = Router();
-userRouter.get("/all", getAllUsers);
-userRouter.post("/add", addOneUser);
-userRouter.put("/update", updateOneUser);
-userRouter.delete("/delete/:id", deleteOneUser);
 
 @Controller("/user")
 export class UserController {
+    private userDao = new UserDao();
+
     @Get("/all")
     public async getAllUsers(req: Request, res: Response): Promise<Response> {
-        const users = await userDao.getAll();
+        const users = await this.userDao.getAll();
         return res.status(OK).json({ users });
     }
 
@@ -34,7 +28,7 @@ export class UserController {
                 error: paramMissingError,
             });
         }
-        await userDao.add(user);
+        await this.userDao.add(user);
         return res.status(CREATED).end();
     }
 
@@ -50,14 +44,14 @@ export class UserController {
             });
         }
         user.id = Number(user.id);
-        await userDao.update(user);
+        await this.userDao.update(user);
         return res.status(OK).end();
     }
 
     @Delete("/delete/:id")
     public async deleteOneUser(req: Request, res: Response): Promise<void> {
         const { id } = req.params;
-        await userDao.delete(Number(id));
+        await this.userDao.delete(Number(id));
         return res.status(OK).end();
     }
 }

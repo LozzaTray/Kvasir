@@ -1,4 +1,4 @@
-import { IUser } from "entities/User";
+import { IUser } from "entity/User";
 import { IUserDao } from "./UserDao";
 import MockDaoMock from "../MockDb/MockDao.mock";
 

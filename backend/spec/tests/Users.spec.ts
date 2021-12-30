@@ -4,12 +4,12 @@ import { SuperTest, Test } from "supertest";
 
 import app from "app";
 import UserDao from "dao/User/UserDao.mock";
-import User, { IUser } from "entities/User";
+import User, { IUser } from "entity/User";
 import { paramMissingError } from "shared/constants";
 import { IReqBody, IResponse } from "../support/types";
 
 describe("Users Routes", () => {
-    const usersPath = "/api/users";
+    const usersPath = "/api/user";
     const getUsersPath = `${usersPath}/all`;
     const addUsersPath = `${usersPath}/add`;
     const updateUserPath = `${usersPath}/update`;

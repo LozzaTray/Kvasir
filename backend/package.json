@@ -21,6 +21,7 @@
         "exec": "./node_modules/.bin/ts-node -r tsconfig-paths/register ./src"
     },
     "dependencies": {
+        "@decorators/di": "^1.0.3",
         "@decorators/express": "^2.6.0",
         "command-line-args": "^5.2.0",
         "cookie-parser": "^1.4.6",
@@ -57,6 +58,6 @@
         "supertest": "^6.1.6",
         "ts-node": "^10.4.0",
         "tsconfig-paths": "^3.12.0",
-        "typescript": "^4.5.4"
+        "typescript": "4.4.3"
     }
 }
