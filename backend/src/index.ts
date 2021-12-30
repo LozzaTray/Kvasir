@@ -1,5 +1,5 @@
 import "./pre-start"; // Must be the first import
-import app from "server";
+import app from "app";
 import logger from "shared/Logger";
 
 // Start the server
