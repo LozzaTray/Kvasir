@@ -1,14 +1,22 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import GoogleMapReact from "google-map-react";
-import config from "config";
+import { config } from "config";
 import { Drink } from "component/drink";
 import { Cluster } from "component/cluster";
 import { getDrinks } from "api/drink";
 import useSupercluster from "use-supercluster";
+import { IDrink } from "model/drink";
 
 const Map: React.FC = () => {
     const mapRef = useRef() as any;
+    // useState
     const [bounds, setBounds] = useState<number[]>([]);
+    const [drinks, setDrinks] = useState<IDrink[]>([]);
+
+    // useEffect
+    useEffect((): void => {
+        getDrinks().then((data) => setDrinks(data));
+    });
 
     const defaultCenter = {
         lat: 52.20805855420469,
@@ -17,8 +25,6 @@ const Map: React.FC = () => {
 
     const defaultZoom = 16;
     const [zoom, setZoom] = useState(defaultZoom);
-
-    const drinks = getDrinks();
 
     const points = drinks.map((drink) => ({
         type: "Feature",

@@ -2,6 +2,16 @@
     "name": "frontend",
     "version": "0.1.0",
     "private": true,
+    "proxy": "http://localhost:3001",
+    "scripts": {
+        "start:dev": "CHOKIDAR_USEPOLLING=true react-scripts start",
+        "start:no-backend": "CHOKIDAR_USEPOLLING=true REACT_APP_MOCK_BACKEND=true react-scripts start",
+        "build": "react-scripts build",
+        "test": "CI=true react-scripts test",
+        "test:watch": "react-scripts test",
+        "eject": "react-scripts eject",
+        "lint": "eslint ."
+    },
     "dependencies": {
         "add": "^2.0.6",
         "google-map-react": "^2.1.10",
@@ -13,14 +23,6 @@
         "supercluster": "^7.1.4",
         "use-supercluster": "^0.4.0",
         "web-vitals": "^1.1.2"
-    },
-    "scripts": {
-        "start": "CHOKIDAR_USEPOLLING=true react-scripts start",
-        "build": "react-scripts build",
-        "test": "CI=true react-scripts test",
-        "test:watch": "react-scripts test",
-        "eject": "react-scripts eject",
-        "lint": "eslint ."
     },
     "browserslist": {
         "production": [
