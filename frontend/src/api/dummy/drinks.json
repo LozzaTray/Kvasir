@@ -1,67 +1,103 @@
 {
-  "drinks": [
-    {
-      "venue": "St John's College Bar",
-      "lat": 52.20805855420469,
-      "lng": 0.11630382846607584,
-      "beverage": "Tetley's",
-      "pence": 215
-    },
-    {
-      "venue": "The Mitre",
-      "lat": 52.20888571694211,
-      "lng": 0.11814968298960132,
-      "beverage": "Nicholson's Pale Ale",
-      "pence": 420
-    },
-    {
-      "venue": "The Pickerel",
-      "lat": 52.20996368667585,
-      "lng": 0.11618023558240591,
-      "beverage": "Foster's",
-      "pence": 370
-    },
-    {
-      "venue": "The Baron of Beef",
-      "lat": 52.208996641898764,
-      "lng": 0.11804998561986617,
-      "beverage": "Ice Breaker Pale Ale",
-      "pence": 390
-    },
-    {
-      "venue": "The Maypole",
-      "lat": 52.20974175721476,
-      "lng": 0.11924937380058505,
-      "beverage": "Elvis Juice",
-      "pence": 410
-    },
-    {
-      "venue": "The Eagle",
-      "lat": 52.20412117195816,
-      "lng": 0.1180357986621598,
-      "beverage": "Stella Artois",
-      "pence": 330
-    },
-    {
-      "venue": "The Regal",
-      "lat": 52.20303397621604,
-      "lng": 0.12347732488722296,
-      "beverage": "Doom Bar",
-      "pence": 190
-    },
-    {
-      "venue": "The Punter",
-      "lat": 52.21064378789526,
-      "lng": 0.11321217461799561,
-      "beverage": "Ghost Ship",
-      "pence": 310
-    },
-    {
-      "venue": "The Castle Inn",
-      "lat": 52.212064722404854,
-      "lng": 0.1134917017518828,
-      "beverage": "Bitburger",
-      "pence": 450
-    }
-  ]
+    "pubDrinks": [
+        {
+            "pub": {
+                "name": "St John's College Bar",
+                "lat": 52.20805855420469,
+                "lng": 0.11630382846607584
+            },
+            "drink": {
+                "name": "Tetley's"
+            },
+            "pence": 215
+        },
+        {
+            "pub": {
+                "name": "The Mitre",
+                "lat": 52.20888571694211,
+                "lng": 0.11814968298960132
+            },
+            "drink": {
+                "name": "Nicholson's Pale Ale"
+            },
+            "pence": 420
+        },
+        {
+            "pub": {
+                "name": "The Pickerel",
+                "lat": 52.20996368667585,
+                "lng": 0.11618023558240591
+            },
+            "drink": {
+                "name": "Foster's"
+            },
+            "pence": 370
+        },
+        {
+            "pub": {
+                "name": "The Baron of Beef",
+                "lat": 52.208996641898764,
+                "lng": 0.11804998561986617
+            },
+            "drink": {
+                "name": "Ice Breaker Pale Ale"
+            },
+            "pence": 390
+        },
+        {
+            "pub": {
+                "name": "The Maypole",
+                "lat": 52.20974175721476,
+                "lng": 0.11924937380058505
+            },
+            "drink": {
+                "name": "Elvis Juice"
+            },
+            "pence": 410
+        },
+        {
+            "pub": {
+                "name": "The Eagle",
+                "lat": 52.20412117195816,
+                "lng": 0.1180357986621598
+            },
+            "drink": {
+                "name": "Stella Artois"
+            },
+            "pence": 330
+        },
+        {
+            "pub": {
+                "name": "The Regal",
+                "lat": 52.20303397621604,
+                "lng": 0.12347732488722296
+            },
+            "drink": {
+                "name": "Doom Bar"
+            },
+            "pence": 190
+        },
+        {
+            "pub": {
+                "name": "The Punter",
+                "lat": 52.21064378789526,
+                "lng": 0.11321217461799561
+            },
+            "drink": {
+                "name": "Ghost Ship"
+            },
+            "pence": 310
+        },
+        {
+            "pub": {
+                "name": "The Castle Inn",
+                "lat": 52.212064722404854,
+                "lng": 0.1134917017518828
+            },
+            "drink": {
+                "name": "Bitburger"
+            },
+            "pence": 450
+        }
+    ]
 }

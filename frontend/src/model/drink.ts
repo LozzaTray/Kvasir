@@ -1,7 +1,15 @@
+export interface IPub {
+    name: string;
+    lat: number;
+    lng: number;
+}
+
 export interface IDrink {
-  lat: number;
-  lng: number;
-  pence: number;
-  venue: string;
-  beverage: string;
+    name: string;
+}
+
+export interface IPubDrink {
+    pub: IPub;
+    drink: IDrink;
+    pence: number;
 }
