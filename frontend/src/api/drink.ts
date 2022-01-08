@@ -1,14 +1,14 @@
 import { config } from "config";
-import { IDrink } from "../model/drink";
+import { IPubDrink } from "../model/drink";
 import * as drinksList from "./dummy/drinks.json";
 
-const getDrinks = async (): Promise<IDrink[]> => {
+const getPubDrinks = async (): Promise<IPubDrink[]> => {
     if (config.mockBackend) {
-        return drinksList.drinks;
+        return drinksList.pubDrinks;
     }
     const response = await fetch("/api/pub/drinks");
     const json = await response.json();
     return json.drinks;
 };
 
-export { getDrinks };
+export { getPubDrinks };

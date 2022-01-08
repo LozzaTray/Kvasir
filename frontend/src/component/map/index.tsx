@@ -3,20 +3,20 @@ import GoogleMapReact from "google-map-react";
 import { config } from "config";
 import { Drink } from "component/drink";
 import { Cluster } from "component/cluster";
-import { getDrinks } from "api/drink";
+import { getPubDrinks } from "api/drink";
 import useSupercluster from "use-supercluster";
-import { IDrink } from "model/drink";
+import { IPubDrink } from "model/drink";
 
 const Map: React.FC = () => {
     const mapRef = useRef() as any;
     // useState
     const [bounds, setBounds] = useState<number[]>([]);
-    const [drinks, setDrinks] = useState<IDrink[]>([]);
+    const [pubDrinks, setPubDrinks] = useState<IPubDrink[]>([]);
 
     // useEffect
     useEffect((): void => {
-        getDrinks().then((data) => setDrinks(data));
-    });
+        getPubDrinks().then((data) => setPubDrinks(data));
+    }, []);
 
     const defaultCenter = {
         lat: 52.20805855420469,
@@ -26,17 +26,15 @@ const Map: React.FC = () => {
     const defaultZoom = 16;
     const [zoom, setZoom] = useState(defaultZoom);
 
-    const points = drinks.map((drink) => ({
+    const points = pubDrinks.map((pubDrink) => ({
         type: "Feature",
         properties: {
             cluster: false,
-            venue: drink.venue,
-            beverage: drink.beverage,
-            pence: drink.pence,
+            ...pubDrink,
         },
         geometry: {
             type: "Point",
-            coordinates: [drink.lng, drink.lat],
+            coordinates: [pubDrink.pub.lng, pubDrink.pub.lat],
         },
     }));
 

@@ -1,9 +1,9 @@
 import React from "react";
-import { IDrink } from "model/drink";
+import { IPubDrink } from "model/drink";
 import { drinks, white, black } from "utils/colors";
 import { DrinksDiv } from "./styles";
 
-const Drink: React.FC<IDrink> = (props) => {
+const Drink: React.FC<IPubDrink> = (props) => {
     return (
         <DrinksDiv>
             <svg
