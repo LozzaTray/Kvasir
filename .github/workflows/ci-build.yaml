@@ -1,4 +1,4 @@
-name: Node.js CI
+name: CI Build
 
 on:
     push:
@@ -22,9 +22,5 @@ jobs:
                   cache: "yarn"
             - name: Install dependencies
               run: yarn install --frozen-lockfile
-            - name: Lint
-              run: yarn run lint
-            - name: Prettier check
-              run: yarn run prettier-check
-            - name: Run tests
-              run: yarn run test
+            - name: Build
+              run: yarn run build
