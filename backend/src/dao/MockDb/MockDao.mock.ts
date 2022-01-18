@@ -1,6 +1,6 @@
 import jsonfile from "jsonfile";
-import { IUser } from "entity/User";
-import { IPubDrink } from "entity/PubDrink";
+import { IUser } from "model/User";
+import { IPubDrink } from "model/PubDrink";
 
 interface IDatabase {
     users: IUser[];

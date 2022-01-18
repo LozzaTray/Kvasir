@@ -1,4 +1,4 @@
-import { IPubDrink } from "entity/PubDrink";
+import { IPubDrink } from "model/PubDrink";
 
 export interface IPubDrinkDao {
     getAll: () => Promise<IPubDrink[]>;

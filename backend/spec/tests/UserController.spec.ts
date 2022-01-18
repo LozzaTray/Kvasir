@@ -4,7 +4,7 @@ import { SuperTest, Test } from "supertest";
 
 import app from "app";
 import UserDao from "dao/User/UserDao.mock";
-import User, { IUser } from "entity/User";
+import User, { IUser } from "model/User";
 import { paramMissingError } from "shared/constants";
 import { IReqBody, IResponse } from "../support/types";
 

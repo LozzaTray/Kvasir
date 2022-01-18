@@ -33,7 +33,10 @@
         "jet-logger": "^1.0.6",
         "jsonfile": "^6.1.0",
         "module-alias": "^2.2.2",
-        "morgan": "^1.10.0"
+        "morgan": "^1.10.0",
+        "typeorm": "0.2.41",
+        "reflect-metadata": "^0.1.10",
+        "pg": "^8.4.0"
     },
     "devDependencies": {
         "@types/command-line-args": "^5.2.0",

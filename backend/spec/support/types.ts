@@ -1,6 +1,6 @@
 import { Response } from "supertest";
 import { IUser } from "entities/User";
-import { IPubDrink } from "entity/PubDrink";
+import { IPubDrink } from "model/PubDrink";
 
 export interface IResponse extends Response {
     body: {

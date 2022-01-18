@@ -1,4 +1,4 @@
-import { IPubDrink } from "entity/PubDrink";
+import { IPubDrink } from "model/PubDrink";
 import MockDaoMock from "../MockDb/MockDao.mock";
 import { IPubDrinkDao } from "./PubDrinkDao";
 
