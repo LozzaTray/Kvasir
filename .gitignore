@@ -3,6 +3,8 @@ node_modules/
 # backend
 backend/node_modules/
 backend/jet-logger.log
+backend/npm-debug.log
+backend/yarn-error.log
 
 # frontend
 frontend/node_modules/
