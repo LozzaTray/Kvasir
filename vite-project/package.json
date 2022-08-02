@@ -7,14 +7,15 @@
         "start:no-backend": "VITE_MOCK_BACKEND=true vite",
         "build": "tsc && vite build",
         "preview": "vite preview",
-        "lint": "eslint --max-warnings=0 src"
+        "lint": "eslint --max-warnings=0 src",
+        "test": "echo test"
     },
     "dependencies": {
         "add": "^2.0.6",
         "google-map-react": "^2.1.10",
-        "react": "^18.0.0",
-        "react-dom": "^18.0.0",
-        "react-is": "^18.0.0",
+        "react": "^17.0.0",
+        "react-dom": "^17.0.0",
+        "react-is": "^17.0.0",
         "react-scripts": "4.0.3",
         "styled-components": "^5.3.3",
         "supercluster": "^7.1.4",
